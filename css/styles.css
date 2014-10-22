@@ -1,5 +1,5 @@
 body { margin: 0; padding: 0; background: #000;}
-canvas { display: block; margin: 0 auto; background: url(../img/back.png) no-repeat; }
+canvas { display: block; margin: 0 auto; background: url(../img/background.png) no-repeat; }
 
 #gamecontainer {
 margin:auto;
@@ -16,6 +16,7 @@ display:none;
 }
 /* Game Starting Menu Screen */
 #gamestartscreen {
+background: url(../img/back.png) no-repeat;
 background-size:100% 100%;
 text-align:center;
 }
@@ -34,6 +35,7 @@ text-align:center;
 }
 
 #gameabout {
+background: url(../img/bgabout.png) no-repeat;
 text-align:center;
 }
 
@@ -43,9 +45,54 @@ margin-top:450px;
 }
 
 .padtop2{
-margin-top:400px;
+margin-top:350px;
 }
 
 .padtop3{
 margin-top:20px;
+}
+
+/** Game find and match **/
+
+#gfind{
+	margin:auto;
+	height:600px;
+	width:800px;
+	float:left;
+}
+
+#gfind #info{
+	margin:auto;
+	height:100px;
+	width:800px;
+	float:left;
+}
+
+#gfind #gambar{
+	margin:10px;
+	border:thick 1px;
+	height:300px;
+	width:780px;
+	float:left;
+}
+
+#gfind #downbar{
+	margin:auto;
+	height:150px;
+	width:800px;
+	float:left;
+}
+
+#gfind #downbar #box1{
+	margin:auto;
+	height:150px;
+	width:150px;
+	float:left;
+}
+
+#gfind #downbar #box2{
+	margin:auto;
+	height:150px;
+	width:650px;
+	float:left;
 }

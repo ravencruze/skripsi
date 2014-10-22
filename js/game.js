@@ -17,8 +17,8 @@ game.init();
 
 var game = {
 
-	WIDTH: 600, 
-    HEIGHT: 800, 
+	WIDTH: 800, 
+    HEIGHT: 600, 
     scale:  1,
     offset: {top: 0, left: 0},
     entities: [],
@@ -85,13 +85,13 @@ var game = {
 	
 	mabout: function(){
 		
-		game.ctx.font = "20px Georgia";
-		game.ctx.fillText("Hello World!", 30, 600);
+		
 		
 		
 		$('#gamestartscreen').hide();
 		$('#gameabout').show();
 		
+		game.ctx.drawImage('#fff',10,10);
 		
 	},
 	
@@ -101,6 +101,9 @@ var game = {
 		$('#gamehs').hide();
 		$('#gamehtp').hide();
 		$('#gameabout').hide();
+		$('#gfind').hide();
+		
+		game.Draw.clear();
 	},
 	
 	mhtp: function(){
@@ -111,11 +114,11 @@ var game = {
 	
 	mplay: function(){
 		
+		
 		$('#gamestartscreen').hide();
 		$('#levelselectscreen').show();
-		$('#gamehs').hide();
-		$('#gamehtp').hide();
-		$('#gameabout').hide();
+		
+		game.Draw.text('Pilih Permainan / Choose Game', 50, 100, 40, '#000');
 		
 		
 	},
@@ -125,6 +128,19 @@ var game = {
 		$('#levelselectscreen').hide();
 		$('#mgshuffle').show();
 		
+		
+	},
+	
+	gfind: function(){
+		game.Draw.clear();
+		
+		$('#levelselectscreen').hide();
+		$('#gfind').show();
+		
+		
+        game.Draw.text('Your Score : ' + game.score.hit, 20, 30, 14, '#000');
+		game.Draw.text('Number : ' + game.score.hit, 20, 50, 14, '#000');
+		game.findmatch.answer();
 		
 	},
 	
@@ -167,3 +183,27 @@ game.Draw = {
     }
 
 };
+
+game.findmatch = {
+	
+	soal: function(){
+		
+	},
+	
+	answer: function(){
+		
+			var x2=130;
+			var y2=350;
+			for(var x=1;x<=4;x++){
+				var image1 = new Image();
+            	image1.src = "img/find/"+x+".png";
+            	game.ctx.drawImage(image1, x2, 350);
+				x2=x2+130;
+				
+				
+			}
+			
+		
+	}
+}
+
