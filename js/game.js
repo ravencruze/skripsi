@@ -99,6 +99,7 @@ var game = {
 		$('#gamestartscreen').show();
 		$('#levelselectscreen').hide();
 		$('#gamehs').hide();
+		$('#gamehtp').hide();
 		$('#gameabout').hide();
 	},
 	
@@ -110,7 +111,6 @@ var game = {
 	
 	mplay: function(){
 		
-		$('.gamelayer').hide();
 		$('#gamestartscreen').hide();
 		$('#levelselectscreen').show();
 		$('#gamehs').hide();
@@ -122,7 +122,6 @@ var game = {
 	
 	gshuffle: function(){
 		
-		$('.gamelayer').hide();
 		$('#levelselectscreen').hide();
 		$('#mgshuffle').show();
 		
@@ -131,7 +130,6 @@ var game = {
 	
 	mhs: function(){
 		
-		$('.gamelayer').hide();
 		$('#gamestartscreen').hide();
 		$('#levelselectscreen').hide();
 		$('#gamehtp').hide();
