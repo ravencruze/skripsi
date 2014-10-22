@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name = "viewport" content = "width=device-width">
+		<title > Kiddy Garden </title>
+		<script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/game.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen" charset="utf-8">
+	</head>
+	<body>
+		<div id="gamecontainer">
+			<canvas id="gamecanvas" class="gamelayer"  >
+            
+            </canvas>
+            
+			<div id="scorescreen" class="gamelayer">
+				<img id="togglemusic" src="images/icons/sound.png">
+				<img src="images/icons/prev.png">
+				<span id="score" > Score: 0</span>
+			</div>
+
+			<div id="gamestartscreen" class="gamelayer">
+				<img src="img/babout.png" class="padtop2" id="mabout" onClick="game.mabout()" alt="About">
+				<img src="img/bhtp.png" class="padtop2" id="mhtp" onClick="game.mhtp()" alt="How to Play">
+				<img src="img/bplay.png" class="padtop2" id="mplay" onClick="game.mplay()" alt="Play Game">
+				<img src="img/bhs.png" class="padtop2" id="mhs" onClick="game.mhs()" alt="Highscore">
+				<img src="img/bexit.png" class="padtop2" id="mexit" onClick="game.exit()" alt="Exit">
+			</div>
+
+			<div id="levelselectscreen" class="gamelayer">
+            	<img src="img/bback.png" id="back" class="padtop2" onClick="game.mback()"  alt="About">
+                <img src="img/gshuffle.png" class="padtop3" id="mgshuffle" onClick="game.gshuffle()" alt="Shuffle">
+				<img src="img/gfind.png" class="padtop3" id="mgfind" onClick="game.gfind()" alt="Find">
+				<img src="img/gscaler.png" class="padtop3" id="mgscaler" onClick="game.mscaler()" alt="Scaler">
+                
+            </div>
+            
+            <div id="gamehtp" class="gamelayer">
+            
+            	<img src="img/bback.png" id="about" class="padtop2" onClick="game.mback()"  alt="About">
+            </div>
+            
+            <div id="gamehs" class="gamelayer">
+            	<img src="img/bback.png" id="about" class="padtop2" onClick="game.mback()"  alt="About">
+            </div>
+            
+            <div id="gameabout" class="gamelayer">
+            	<img src="img/bback.png" id="about" class="padtop2" onClick="game.mback()"  alt="About">
+            </div>
+            
+            <div id="gshuffle" class="gamelayer">
+            	<img src="img/bback.png" id="about" class="padtop2" onClick="game.mback()"  alt="About">
+            </div>
+            
+            <div id="gfind" class="gamelayer">
+            	<img src="img/bback.png" id="about" class="padtop2" onClick="game.mback()"  alt="About">
+            </div>
+            
+            <div id="gscale" class="gamelayer">
+            	<img src="img/bback.png" id="about" class="padtop2" onClick="game.mback()"  alt="About">
+            </div>
+            
+			<div id="loadingscreen" class="gamelayer">
+				<div id="loadingmessage"></div>
+			</div>
+		
+			<div id="endingscreen" class="gamelayer">
+				<div>
+					<p id="endingmessage" > The Level Is Over Message</p>
+					<p id="playcurrentlevel"><img src="images/icons/prev.png" > Replay Current Level</p>
+					<p id="playnextlevel"><img src="images/icons/next.png" > Play Next Level </p>
+					<p id="showLevelScreen"><img src="images/icons/return.png" > Return to Level Screen</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

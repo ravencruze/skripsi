@@ -1,0 +1,51 @@
+body { margin: 0; padding: 0; background: #000;}
+canvas { display: block; margin: 0 auto; background: url(../img/back.png) no-repeat; background-size:100% 100% }
+
+#gamecontainer {
+margin:auto;
+width:800px;
+height:600px;
+background-size: cover;
+border: 1px solid black;
+}
+.gamelayer {
+width:800px;
+height:600px;
+position:absolute;
+display:none;
+}
+/* Game Starting Menu Screen */
+#gamestartscreen {
+background-size:100% 100%;
+text-align:center;
+}
+
+#levelselectscreen {
+/**background: url(../img/background.png) no-repeat;**/
+text-align:center;
+}
+
+#gamehtp {
+text-align:center;
+}
+
+#gamehs {
+text-align:center;
+}
+
+#gameabout {
+text-align:center;
+}
+
+
+.padtop{
+margin-top:450px;
+}
+
+.padtop2{
+margin-top:400px;
+}
+
+.padtop3{
+margin-top:20px;
+}
