@@ -17,8 +17,8 @@ game.init();
 
 var game = {
 
-	WIDTH: 800, 
-    HEIGHT: 600, 
+	WIDTH: 600, 
+    HEIGHT: 800, 
     scale:  1,
     offset: {top: 0, left: 0},
     entities: [],
