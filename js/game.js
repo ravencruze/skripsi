@@ -40,16 +40,16 @@ var game = {
 	
 	init: function(){
 		game.RATIO = game.WIDTH / game.HEIGHT;
-        game.currentWidth = game.WIDTH;
-        game.currentHeight = game.HEIGHT;
+        game.currentWidth = window.WIDTH;
+        game.currentHeight = window.HEIGHT;
 		
 		$('.gamelayer').hide();
 		$('#gamestartscreen').show();
 		$('#gamecanvas').show();
 		
 		game.canvas = document.getElementsByTagName('canvas')[0];
-		game.canvas.width = game.WIDTH;
-        game.canvas.height = game.HEIGHT;
+		game.canvas.width = window.WIDTH;
+        game.canvas.height = window.HEIGHT;
 		
 		
 		game.ctx = game.canvas.getContext('2d');
@@ -75,7 +75,7 @@ var game = {
 		if (game.android || game.ios) {
             document.body.style.height = (window.innerHeight + 50) + 'px';
         }
-        game.scale = game.currentWidth / game.WIDTH;
+        game.scale = game.currentWidth / window.WIDTH;
         game.offset.top = game.canvas.offsetTop;
         game.offset.left = game.canvas.offsetLeft;
     	window.setTimeout(function() {
@@ -118,7 +118,7 @@ var game = {
 		$('#gamestartscreen').hide();
 		$('#levelselectscreen').show();
 		
-		game.Draw.text('Pilih Permainan / Choose Game', 50, 100, 40, '#000');
+		game.Draw.text('Pilih Permainan / Choose Game', 50, 100, 30, '#000');
 		
 		
 	},
@@ -186,21 +186,23 @@ game.Draw = {
 
 game.findmatch = {
 	
-	soal: function(){
-		
-	},
 	
 	answer: function(){
 		
+			var ia = new Array();
+			
 			var x2=130;
 			var y2=350;
 			for(var x=1;x<=4;x++){
 				var image1 = new Image();
             	image1.src = "img/find/"+x+".png";
+				ia[x] = image1;
             	game.ctx.drawImage(image1, x2, 350);
 				x2=x2+130;
 				
-				
+				document.ia[x].onclick = function() {
+   					game.ctx.drawImage(image1, 500, 350);
+				}
 			}
 			
 		
